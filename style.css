@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(rose/cup.jpg);
+  background-size: cover;
+
+  font-family: sans-serif;
+}
+.menu-bar {
+  background-color: white;
+  text-align: center;
+}
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: green;
+}
+.menu-bar ul li {
+  width: 120px;
+  margin: 15px;
+  padding: 10px;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: green;
+}
+.menu-bar ul li a:hover {
+  background-color: green;
+  color: white;
+}
+.sub-menu1 {
+  display: none;
+}
+.menu-bar ul li:hover .sub-menu1 {
+  display: block;
+  position: absolute;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu1 ul {
+  display: inline-block;
+}
+.menu-bar ul li:hover .sub-menu1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted green;
+  text-align: left;
+  border-radius: 0;
+}
+.menu-bar ul li:hover .sub-menu1 ul li:last-child {
+  border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu1 ul li a:hover {
+  color: greenyellow;
+  background-color: green;
+}
+.fa-angle-right {
+  float: right;
+}
+.sub-menu2 {
+  display: none;
+}
+.hover-me:hover .sub-menu2 {
+  position: absolute;
+  display: block;
+  margin-top: -40px;
+  margin-left: 140px;
+  background-color: white;
+}

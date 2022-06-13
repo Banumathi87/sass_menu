@@ -1,0 +1,69 @@
+@import "partials/partials";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(rose/cup.jpg);
+  background-size: cover;
+  font-family: sans-serif;
+}
+.menu-bar {
+  background-color: map-get($map: $alert-colors, $key: "secondary");
+  text-align: center;
+}
+.menu-bar ul {
+  display: inline-flex;
+  list-style: none;
+  color: map-get($map: $alert-colors, $key: "primary");
+}
+.menu-bar ul li {
+  width: 120px;
+  margin: 15px;
+  padding: 10px;
+}
+.menu-bar ul li a {
+  text-decoration: none;
+  color: map-get($map: $alert-colors, $key: "primary");
+}
+.menu-bar ul li a:hover {
+  background-color: map-get($map: $alert-colors, $key: "primary");
+  color: map-get($map: $alert-colors, $key: "secondary");
+}
+.sub-menu1 {
+  display: none;
+}
+.menu-bar ul li:hover .sub-menu1 {
+  @extend common;
+  margin-top: 15px;
+  margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu1 ul {
+  display: inline-block;
+}
+.menu-bar ul li:hover .sub-menu1 ul li {
+  width: 150px;
+  padding: 10px;
+  border-bottom: 1px dotted map-get($map: $alert-colors, $key: "primary");
+  text-align: left;
+  border-radius: 0;
+}
+.menu-bar ul li:hover .sub-menu1 ul li:last-child {
+  border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu1 ul li a:hover {
+  color: map-get($map: $alert-colors, $key: "third");
+  background-color: map-get($map: $alert-colors, $key: "primary");
+}
+.fa-angle-right {
+  float: right;
+}
+.sub-menu2 {
+  display: none;
+}
+.hover-me:hover .sub-menu2 {
+  @extend common;
+  margin-top: -40px;
+  margin-left: 140px;
+}

@@ -1,0 +1,5 @@
+@mixin common {
+  position: absolute;
+  display: block;
+  background-color: map-get($map: $alert-colors, $key: "secondary");
+}
